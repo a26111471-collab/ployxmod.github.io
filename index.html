@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <script type="text/javascript">
-var sc_project=13206088; 
-var sc_invisible=1; 
-var sc_security="cb6f73f3"; 
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ0798RDQ2"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-WQ0798RDQ2');
-</script>
 <script type="text/javascript">
 var sc_project=13206088; 
 var sc_invisible=1; 
@@ -33,12 +19,13 @@ gtag('config', 'G-WQ0798RDQ2');
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>PUBG MOBILE UC</title>
+<title>💎💎</title>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
-:root { --primary:#f3a90b; --dark-bg:#1a1d24; --dark-text:#f8fafc; }
+:root { --primary:#ffcc00; --red:#e41e26; --dark-text:#1e293b; }
 
+/* تحسينات عامة للتجاوب مع كافة الأجهزة */
 *{
     box-sizing:border-box;
     -webkit-tap-highlight-color:transparent;
@@ -46,7 +33,7 @@ gtag('config', 'G-WQ0798RDQ2');
 }
 
 body{
-    background:#0f1115;
+    background:#ffffff;
     color:var(--dark-text);
     font-family:'Cairo',sans-serif;
     margin:0;
@@ -55,6 +42,7 @@ body{
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    /* يضمن ملء كامل الشاشة حتى في متصفحات الآيفون */
     min-height: 100vh;
     min-height: -webkit-fill-available;
     overflow-x: hidden;
@@ -63,147 +51,123 @@ body{
 .main-container{
     width: 90%;
     max-width: 420px;
-    background: var(--dark-bg);
+    background: #ffffff;
     border-radius: 20px;
-    padding: 25px;
-    border: 2px solid var(--primary);
-    box-shadow: 0 0 25px rgba(243, 169, 11, 0.2);
+    padding: 20px;
+    border: 3px solid var(--primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
+    /* التوسيط في منتصف الشاشة */
     margin: 20px auto;
 }
 
 .game-title{
-    font-weight: 900;
-    font-size: clamp(1.5rem, 5vw, 1.8rem);
-    color: var(--primary);
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-weight:900;
+    font-size: clamp(1.5rem, 5vw, 1.8rem); /* حجم خط مرن حسب حجم الشاشة */
+    color:var(--red);
+    margin-bottom:20px;
 }
 
 .step-card{display:none;flex-direction:column;align-items:center;}
 .step-card.active{display:flex;}
 
 h2{
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    margin-bottom: 20px;
-    color: #cbd5e1;
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    margin-bottom:20px;
+    color:var(--dark-text);
 }
 
 .input-box{
     width:100%;
     padding:15px;
     border-radius:10px;
-    border:1px solid #334155;
-    background:#242933;
-    color:#fff;
+    border:2px solid #e2e8f0;
+    background:#f8fafc;
+    color:#000;
     font-size:18px;
     margin-bottom:10px;
     text-align:center;
     outline:none;
-    -webkit-appearance: none;
+    -webkit-appearance: none; /* يمنع التصميم الافتراضي المزعج في آيفون */
 }
 
-.btn-gold{
-    background: linear-gradient(135deg, #f3a90b, #b97d07);
-    color:#000;
+.btn-red{
+    background:var(--red);
+    color:#fff;
     border:none;
     padding:15px;
     width:100%;
     border-radius:10px;
-    font-weight:900;
+    font-weight:700;
     font-size:18px;
     cursor:pointer;
-    box-shadow: 0 4px 0 #7e5504;
+    box-shadow:0 4px 0 #991b1b;
     margin-top:10px;
-    transition: 0.2s;
+    transition: transform 0.1s;
 }
 
-.btn-gold:active {
+.btn-red:active {
     transform: translateY(2px);
-    box-shadow: 0 2px 0 #7e5504;
+    box-shadow: 0 2px 0 #991b1b;
 }
 
-.uc-item{
+.gem-item{
     width:100%;
-    background:#2d333f;
-    padding: 12px 15px;
+    background:#1e293b;
+    padding: 12px clamp(10px, 3vw, 15px);
     border-radius:12px;
     margin-bottom:10px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border:1px solid #475569;
+    border:1px solid #334155;
     cursor:pointer;
     color:#fff;
-    transition: 0.3s;
 }
 
-.uc-item:hover { border-color: var(--primary); }
-
-/* تصميم أيقونة UC الرسمية والمحاكية للعبة ببجي */
-.uc-info{display:flex;align-items:center;gap:12px;font-weight:bold;font-size: 1.1rem;}
-
-.uc-icon-official {
-    width: 32px;
-    height: 32px;
-    background: linear-gradient(135deg, #ffe082 0%, #f3a90b 50%, #b97d07 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #fff;
-    box-shadow: 0 0 10px rgba(243, 169, 11, 0.5), inset 0 0 5px rgba(0,0,0,0.3);
-    flex-shrink: 0;
-}
-
-.uc-icon-official span {
-    color: #000;
-    font-family: 'Arial Black', sans-serif; /* خط عريض ومناسب للأيقونة */
-    font-weight: 900;
-    font-size: 15px;
-    letter-spacing: -1px;
-    text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
-    line-height: 1;
-}
-
-.uc-tag{background:var(--primary);color:#000;padding:4px 12px;border-radius:5px;font-size:12px;font-weight:900;}
+.gem-info{display:flex;align-items:center;gap:10px;font-weight:bold;font-size: clamp(0.9rem, 3.5vw, 1.1rem);}
+.gem-tag{background:var(--primary);color:#000;padding:4px 12px;border-radius:5px;font-size:13px;font-weight:900;}
 
 .console{
     background:#000;
-    color:#f3a90b;
+    color:#22c55e;
     font-family:monospace;
-    padding:12px;
+    padding:10px;
     border-radius:8px;
     font-size:12px;
     text-align:left;
     direction:ltr;
     width:100%;
-    height: 130px;
+    height: 120px;
     overflow-y:auto;
     margin:15px 0;
-    border: 1px solid #334155;
 }
 
 .final-msg{
-    color:#10b981;
+    color:#15803d;
     font-weight:bold;
     line-height:1.6;
     margin-bottom:15px;
-    background:rgba(16, 185, 129, 0.1);
-    padding:12px;
+    background:#f0fdf4;
+    padding:10px;
     border-radius:8px;
-    border:1px solid rgba(16, 185, 129, 0.3);
+    border:1px solid #bcf0da;
 }
 
-.error{color:#ef4444;font-size:13px;margin-bottom:10px;display:none;font-weight:bold;}
+.error{color:#ff4b2b;font-size:13px;margin-bottom:10px;display:none;font-weight:bold;}
 
 #robot-msg {
-    color: #ef4444;
+    color: red;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     display: none;
     font-size: 1.1rem;
+}
+
+/* حل مشكلة الحواف في الهواتف الصغيرة جداً */
+@media (max-width: 320px) {
+    .main-container { padding: 15px; }
+    .game-title { font-size: 1.3rem; }
 }
 </style>
 </head>
@@ -211,41 +175,41 @@ h2{
 <body>
 
 <div class="main-container">
-<div class="game-title">PUBG MOBILE</div>
+<div class="game-title">FREE FIRE</div>
 
 <div id="step1" class="step-card active">
-<h2>أدخل معرف اللاعب (ID)</h2>
-<input type="text" id="p-id" class="input-box" placeholder="Character ID" inputmode="numeric" pattern="[0-9]*">
-<p id="err" class="error">خطأ يرجى إدخال ID صحيح</p>
-<button class="btn-gold" onclick="valID()">تسجيل الدخول</button>
+<h2>تسجيل الدخول بمعرف اللاعب</h2>
+<input type="text" id="p-id" class="input-box" placeholder="معرف اللاعب (ID)" inputmode="numeric" pattern="[0-9]*">
+<p id="err" class="error">⚠️ خطأ يرجى إدخال ID صحيح</p>
+<button class="btn-red" onclick="valID()">تسجيل الدخول</button>
 </div>
 
 <div id="step2" class="step-card">
-<h2>اختر نظام التشغيل</h2>
-<div class="uc-item" onclick="move(3)" style="justify-content: center;">Android</div>
-<div class="uc-item" onclick="move(3)" style="justify-content: center;">iOS (iPhone)</div>
+<h2>ما هو مستواك في اللعبة؟</h2>
+<input type="text" id="p-lvl" class="input-box" placeholder="Account Level" inputmode="numeric" pattern="[0-9]*">
+<button class="btn-red" onclick="move(3)">تأكيد المستوى</button>
 </div>
 
 <div id="step3" class="step-card">
-<h2>اختر كمية الشدات (UC)</h2>
-<div class="uc-item" onclick="move(4)"><div class="uc-info"><div class="uc-icon-official"><span>UC</span></div> 660</div><div class="uc-tag">نقل</div></div>
-<div class="uc-item" onclick="move(4)"><div class="uc-info"><div class="uc-icon-official"><span>UC</span></div> 1800</div><div class="uc-tag">نقل</div></div>
-<div class="uc-item" onclick="move(4)"><div class="uc-info"><div class="uc-icon-official"><span>UC</span></div> 3850</div><div class="uc-tag">نقل</div></div>
-<div class="uc-item" onclick="move(4)"><div class="uc-info"><div class="uc-icon-official"><span>UC</span></div> 8100</div><div class="uc-tag">نقل</div></div>
+<h2>اختر كمية الجواهر</h2>
+<div class="gem-item" onclick="move(4)"><div class="gem-info">💎 100+10</div><div class="gem-tag">استلام</div></div>
+<div class="gem-item" onclick="move(4)"><div class="gem-info">💎 210+20</div><div class="gem-tag">استلام</div></div>
+<div class="gem-item" onclick="move(4)"><div class="gem-info">💎 530+31</div><div class="gem-tag">استلام</div></div>
+<div class="gem-item" onclick="move(4)"><div class="gem-info">💎 1080+100</div><div class="gem-tag">استلام</div></div>
 </div>
 
 <div id="step4" class="step-card">
-<h2 id="wait-text">جاري الاتصال بالخادم</h2>
+<h2 id="wait-text">جاري معالجة البيانات</h2>
 <div class="console" id="log"></div>
 
 <div id="fin" style="display:none;">
-<p class="final-msg">تم العثور على الحساب والمكافأة جاهزة</p>
+<p class="final-msg">تم التحقق من الحساب بنجاح</p>
 
-<div id="robot-msg">الرجاء التحقق من أنك لست روبوت</div>
+<div id="robot-msg">الرجاء تأكيد أنك لست روبوت</div>
 
 <div data-captcha-enable="true"></div>
 
-<button class="btn-gold" style="box-shadow:0 4px 0 #7e5504;" onclick="final()">تأكيد العملية الآن</button>
+<button class="btn-red" style="background:var(--primary);color:#000;box-shadow:0 4px 0 #b79500;" onclick="final()">اضغط للتحقق الأخير</button>
 </div>
 </div>
 </div>
@@ -254,7 +218,7 @@ h2{
 let playerID="";
 function valID(){
 const input=document.getElementById('p-id').value;
-if(/^\d{5,15}$/.test(input)){
+if(/^\d{7,12}$/.test(input)){
 playerID=input;
 document.getElementById('err').style.display='none';
 move(2);
@@ -271,14 +235,7 @@ if(s===4)runLog();
 
 function runLog(){
 const log=document.getElementById('log');
-const lines=[
-    "> Connecting to PUBG servers...",
-    "> Accessing database for ID: "+playerID,
-    "> Account found and active",
-    "> Bypassing security protocol...",
-    "> Transferring UC to inventory...",
-    "> Status: Human verification required"
-];
+const lines=["> Connecting...","> ID: "+playerID+" Found","> Checking Account Level...","> Injecting Diamonds...","> Human verification needed"];
 let i=0;
 let itv=setInterval(()=>{
 log.innerHTML+=`<div>${lines[i]}</div>`;
@@ -287,7 +244,7 @@ i++;
 if(i>=lines.length){
 clearInterval(itv);
 document.getElementById('fin').style.display='block';
-document.getElementById('wait-text').innerText="اكتمل الفحص بنجاح";
+document.getElementById('wait-text').innerText="اكتمل الفحص";
 }
 },1000);
 }
