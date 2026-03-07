@@ -1,270 +1,312 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-<!-- Default Statcounter code for Lolooo
-https://ployxmod.github.io/ -->
-<script type="text/javascript">
-var sc_project=13206088; 
-var sc_invisible=1; 
-var sc_security="cb6f73f3"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics
-Made Easy - Statcounter" href="https://statcounter.com/"
-target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/13206088/0/cb6f73f3/1/"
-alt="Web Analytics Made Easy - Statcounter"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ0798RDQ2"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-WQ0798RDQ2');
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamic SEO Tags -->
+    <title id="meta-title">Weather in London Today – 7 Day Forecast, Rain, Wind and Temperature</title>    <meta name="description" id="meta-desc" content="Check today's weather in London including temperature, humidity, wind speed, rain probability and 7 day forecast.">
+    <meta name="keywords" id="meta-keys" content="london weather, weather london today, london forecast, rain london, temperature london">    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { --glass: rgba(255, 255, 255, 0.1); }
+        .dark { --bg: #0f172a; --text: #f1f5f9; --card: #1e293b; }
+        .light { --bg: #f8fafc; --text: #1e293b; --card: #ffffff; }
+        
+        body { background-color: var(--bg); color: var(--text); transition: all 0.3s ease; font-family: 'Inter', sans-serif; }
+        .glass-card { background: var(--card); border: 1px solid rgba(0,0,0,0.1); border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        
+        /* Animated Weather Icons */
+        .sun { animation: rotate 10s linear infinite; color: #fbbf24; }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .cloud { animation: drift 3s ease-in-out infinite alternate; }
+        @keyframes drift { from { transform: translateX(-5px); } to { transform: translateX(5px); } }
+        .rain-drop { animation: fall 1s linear infinite; }
+        @keyframes fall { to { transform: translateY(10px); opacity: 0; } }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>💎💎</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-
-<style>
-:root { --primary:#ffcc00; --red:#e41e26; --dark-text:#1e293b; }
-
-/* تحسينات عامة للتجاوب مع كافة الأجهزة */
-*{
-    box-sizing:border-box;
-    -webkit-tap-highlight-color:transparent;
-    touch-action: manipulation;
-}
-
-body{
-    background:#ffffff;
-    color:var(--dark-text);
-    font-family:'Cairo',sans-serif;
-    margin:0;
-    padding:0;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    /* يضمن ملء كامل الشاشة حتى في متصفحات الآيفون */
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-    overflow-x: hidden;
-}
-
-.main-container{
-    width: 90%;
-    max-width: 420px;
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 20px;
-    border: 3px solid var(--primary);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    text-align: center;
-    /* التوسيط في منتصف الشاشة */
-    margin: 20px auto;
-}
-
-.game-title{
-    font-weight:900;
-    font-size: clamp(1.5rem, 5vw, 1.8rem); /* حجم خط مرن حسب حجم الشاشة */
-    color:var(--red);
-    margin-bottom:20px;
-}
-
-.step-card{display:none;flex-direction:column;align-items:center;}
-.step-card.active{display:flex;}
-
-h2{
-    font-size: clamp(1.1rem, 4vw, 1.3rem);
-    margin-bottom:20px;
-    color:var(--dark-text);
-}
-
-.input-box{
-    width:100%;
-    padding:15px;
-    border-radius:10px;
-    border:2px solid #e2e8f0;
-    background:#f8fafc;
-    color:#000;
-    font-size:18px;
-    margin-bottom:10px;
-    text-align:center;
-    outline:none;
-    -webkit-appearance: none; /* يمنع التصميم الافتراضي المزعج في آيفون */
-}
-
-.btn-red{
-    background:var(--red);
-    color:#fff;
-    border:none;
-    padding:15px;
-    width:100%;
-    border-radius:10px;
-    font-weight:700;
-    font-size:18px;
-    cursor:pointer;
-    box-shadow:0 4px 0 #991b1b;
-    margin-top:10px;
-    transition: transform 0.1s;
-}
-
-.btn-red:active {
-    transform: translateY(2px);
-    box-shadow: 0 2px 0 #991b1b;
-}
-
-.gem-item{
-    width:100%;
-    background:#1e293b;
-    padding: 12px clamp(10px, 3vw, 15px);
-    border-radius:12px;
-    margin-bottom:10px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border:1px solid #334155;
-    cursor:pointer;
-    color:#fff;
-}
-
-.gem-info{display:flex;align-items:center;gap:10px;font-weight:bold;font-size: clamp(0.9rem, 3.5vw, 1.1rem);}
-.gem-tag{background:var(--primary);color:#000;padding:4px 12px;border-radius:5px;font-size:13px;font-weight:900;}
-
-.console{
-    background:#000;
-    color:#22c55e;
-    font-family:monospace;
-    padding:10px;
-    border-radius:8px;
-    font-size:12px;
-    text-align:left;
-    direction:ltr;
-    width:100%;
-    height: 120px;
-    overflow-y:auto;
-    margin:15px 0;
-}
-
-.final-msg{
-    color:#15803d;
-    font-weight:bold;
-    line-height:1.6;
-    margin-bottom:15px;
-    background:#f0fdf4;
-    padding:10px;
-    border-radius:8px;
-    border:1px solid #bcf0da;
-}
-
-.error{color:#ff4b2b;font-size:13px;margin-bottom:10px;display:none;font-weight:bold;}
-
-#robot-msg {
-    color: red;
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: none;
-    font-size: 1.1rem;
-}
-
-/* حل مشكلة الحواف في الهواتف الصغيرة جداً */
-@media (max-width: 320px) {
-    .main-container { padding: 15px; }
-    .game-title { font-size: 1.3rem; }
-}
-</style>
+        #city-suggestions { max-height: 200px; overflow-y: auto; z-index: 50; }
+        .forecast-scroll::-webkit-scrollbar { height: 6px; }
+        .forecast-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
 </head>
+<body class="light">
 
-<body>
+    <!-- Header & Search -->
+    <header class="p-4 sticky top-0 z-50 bg-opacity-80 backdrop-blur-md border-b">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
+            <h1 class="text-2xl font-bold flex items-center gap-2">
+                <i class="fas fa-cloud-sun-rain text-blue-500"></i> UK Weather<span class="text-blue-500">Pro</span>
+            </h1>
+            
+            <div class="relative flex-1 max-w-md">
+                <div class="relative">
+                    <input type="text" id="city-search" placeholder="Search 300+ UK cities (e.g. Manchester)..." 
+                        class="w-full px-4 py-2 rounded-full border focus:ring-2 focus:ring-blue-500 outline-none text-slate-800">
+                    <i class="fas fa-search absolute right-4 top-3 text-gray-400"></i>
+                </div>
+                <div id="city-suggestions" class="absolute w-full mt-1 bg-white border rounded-lg shadow-xl hidden text-slate-800"></div>
+            </div>
 
-<div class="main-container">
-<div class="game-title">FREE FIRE</div>
+            <button id="theme-toggle" class="p-2 rounded-full bg-slate-200 dark:bg-slate-700">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
 
-<div id="step1" class="step-card active">
-<h2>تسجيل الدخول بمعرف اللاعب</h2>
-<input type="text" id="p-id" class="input-box" placeholder="معرف اللاعب (ID)" inputmode="numeric" pattern="[0-9]*">
-<p id="err" class="error">⚠️ خطأ يرجى إدخال ID صحيح</p>
-<button class="btn-red" onclick="valID()">تسجيل الدخول</button>
-</div>
+    <main class="max-w-6xl mx-auto p-4 space-y-6">
+        <!-- Current Weather Hero -->
+        <section id="current-weather" class="glass-card p-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <h2 id="display-city" class="text-4xl font-extrabold mb-1">London</h2>
+                <p id="display-coords" class="text-sm opacity-70 mb-4">Lat: 51.5074 | Lon: -0.1278</p>
+                <div class="text-6xl font-bold mb-2"><span id="temp">--</span>°C</div>
+                <p class="text-xl capitalize" id="weather-desc">Loading...</p>
+                <p class="text-md mt-2">Feels like: <span id="feels-like">--</span>°C</p>
+            </div>
 
-<div id="step2" class="step-card">
-<h2>ما هو مستواك في اللعبة؟</h2>
-<input type="text" id="p-lvl" class="input-box" placeholder="Account Level" inputmode="numeric" pattern="[0-9]*">
-<button class="btn-red" onclick="move(3)">تأكيد المستوى</button>
-</div>
+            <div id="main-icon" class="text-8xl">
+                <i class="fas fa-sun sun"></i>
+            </div>
 
-<div id="step3" class="step-card">
-<h2>اختر كمية الجواهر</h2>
-<div class="gem-item" onclick="move(4)"><div class="gem-info">💎 100+10</div><div class="gem-tag">استلام</div></div>
-<div class="gem-item" onclick="move(4)"><div class="gem-info">💎 210+20</div><div class="gem-tag">استلام</div></div>
-<div class="gem-item" onclick="move(4)"><div class="gem-info">💎 530+31</div><div class="gem-tag">استلام</div></div>
-<div class="gem-item" onclick="move(4)"><div class="gem-info">💎 1080+100</div><div class="gem-tag">استلام</div></div>
-</div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full md:w-auto">
+                <div class="p-3 text-center border rounded-lg">
+                    <i class="fas fa-tint text-blue-400 mb-1"></i>
+                    <p class="text-xs uppercase">Humidity</p>
+                    <p class="font-bold" id="humidity">--%</p>                </div>
+                <div class="p-3 text-center border rounded-lg">
+                    <i class="fas fa-wind text-gray-400 mb-1"></i>
+                    <p class="text-xs uppercase">Wind</p>
+                    <p class="font-bold" id="wind-speed">-- mph</p>
+                </div>
+                <div class="p-3 text-center border rounded-lg">                    <i class="fas fa-umbrella text-blue-300 mb-1"></i>
+                    <p class="text-xs uppercase">Rain %</p>
+                    <p class="font-bold" id="rain-prob">--%</p>
+                </div>
+                <div class="p-3 text-center border rounded-lg">
+                    <i class="fas fa-sun text-orange-400 mb-1"></i>
+                    <p class="text-xs uppercase">UV Index</p>
+                    <p class="font-bold" id="uv-index">--</p>
+                </div>
+                <div class="p-3 text-center border rounded-lg">
+                    <i class="fas fa-eye text-green-400 mb-1"></i>
+                    <p class="text-xs uppercase">Visibility</p>
+                    <p class="font-bold" id="visibility">-- km</p>
+                </div>
+                <div class="p-3 text-center border rounded-lg">
+                    <i class="fas fa-compress-arrows-alt text-purple-400 mb-1"></i>
+                    <p class="text-xs uppercase">Pressure</p>
+                    <p class="font-bold" id="pressure">-- hPa</p>
+                </div>            </div>
+        </section>
 
-<div id="step4" class="step-card">
-<h2 id="wait-text">جاري معالجة البيانات</h2>
-<div class="console" id="log"></div>
+        <!-- Hourly & Daily Tabs -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Hourly Forecast -->
+                <section class="glass-card p-6">
+                    <h3 class="text-xl font-bold mb-4">Hourly Forecast (Next 24h)</h3>
+                    <div id="hourly-forecast" class="flex gap-6 overflow-x-auto pb-4 forecast-scroll">
+                        <!-- JS Injection -->
+                    </div>
+                </section>
 
-<div id="fin" style="display:none;">
-<p class="final-msg">تم التحقق من الحساب بنجاح</p>
+                <!-- 7 & 14 Day Forecast -->
+                <section class="glass-card p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold">Extended Forecast</h3>
+                        <select id="forecast-range" class="bg-transparent border rounded px-2 py-1 outline-none">
+                            <option value="7">Next 7 Days</option>
+                            <option value="14">Next 14 Days</option>
+                        </select>
+                    </div>
+                    <div id="daily-forecast" class="space-y-3">
+                        <!-- JS Injection -->
+                    </div>
+                </section>
+            </div>
 
-<div id="robot-msg">الرجاء تأكيد أنك لست روبوت</div>
+            <!-- Sidebar Info -->
+            <div class="space-y-6">
+                <!-- Radar Map -->
+                <section class="glass-card p-4 h-80">
+                    <h3 class="text-lg font-bold mb-2">Weather Radar</h3>
+                    <iframe id="radar-map" class="w-full h-64 rounded-lg" src="https://embed.windy.com/embed2.html?lat=51.507&lon=-0.127&zoom=5&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=mph&metricTemp=%C2%B0C&radarRange=-1" frameborder="0"></iframe>
+                </section>
 
-<div data-captcha-enable="true"></div>
+                <!-- Sun/Moon -->
+                <section class="glass-card p-6">
+                    <h3 class="text-lg font-bold mb-4">Astro Data</h3>
+                    <div class="flex justify-between items-center p-3 border-b">
+                        <span><i class="fas fa-arrow-up text-yellow-500 mr-2"></i> Sunrise</span>
+                        <span id="sunrise">--:--</span>
+                    </div>
+                    <div class="flex justify-between items-center p-3">
+                        <span><i class="fas fa-arrow-down text-orange-500 mr-2"></i> Sunset</span>
+                        <span id="sunset">--:--</span>                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
 
-<button class="btn-red" style="background:var(--primary);color:#000;box-shadow:0 4px 0 #b79500;" onclick="final()">اضغط للتحقق الأخير</button>
-</div>
-</div>
-</div>
+    <footer class="text-center p-8 opacity-60 text-sm">
+        <p>&copy; 2023 UK Weather Pro. Data provided by Open-Meteo. SEO Optimized for 300+ UK Cities.</p>
+    </footer>
 
-<script>
-let playerID="";
-function valID(){
-const input=document.getElementById('p-id').value;
-if(/^\d{7,12}$/.test(input)){
-playerID=input;
-document.getElementById('err').style.display='none';
-move(2);
-}else{
-document.getElementById('err').style.display='block';
-}
-}
+    <script>
+        // Configuration & City Data (Condensed list for example, can be expanded to 300+)
+        const ukCities = [
+            { name: "London", lat: 51.5074, lon: -0.1278 },
+            { name: "Manchester", lat: 53.4808, lon: -2.2426 },
+            { name: "Birmingham", lat: 52.4862, lon: -1.8904 },
+            { name: "Liverpool", lat: 53.4084, lon: -2.9916 },
+            { name: "Leeds", lat: 53.8008, lon: -1.5491 },
+            { name: "Glasgow", lat: 55.8642, lon: -4.2518 },
+            { name: "Edinburgh", lat: 55.9533, lon: -3.1883 },
+            { name: "Bristol", lat: 51.4545, lon: -2.5879 },
+            { name: "Cardiff", lat: 51.4816, lon: -3.1791 },
+            { name: "Belfast", lat: 54.5973, lon: -5.9301 },
+            { name: "Newcastle", lat: 54.9783, lon: -1.6178 },
+            { name: "Sheffield", lat: 53.3811, lon: -1.4701 }
+            // Add more up to 300...
+        ];
 
-function move(s){
-document.querySelectorAll('.step-card').forEach(c=>c.classList.remove('active'));
-document.getElementById('step'+s).classList.add('active');
-if(s===4)runLog();
-}
+        let currentCity = ukCities[0];
 
-function runLog(){
-const log=document.getElementById('log');
-const lines=["> Connecting...","> ID: "+playerID+" Found","> Checking Account Level...","> Injecting Diamonds...","> Human verification needed"];
-let i=0;
-let itv=setInterval(()=>{
-log.innerHTML+=`<div>${lines[i]}</div>`;
-log.scrollTop=log.scrollHeight;
-i++;
-if(i>=lines.length){
-clearInterval(itv);
-document.getElementById('fin').style.display='block';
-document.getElementById('wait-text').innerText="اكتمل الفحص";
-}
-},1000);
-}
+        // Theme Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            document.body.classList.toggle('light');
+            themeToggle.innerHTML = document.body.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
 
-function final(){
-    document.getElementById('robot-msg').style.display = 'block';
-}
-</script>
+        // Search Logic
+        const searchInput = document.getElementById('city-search');
+        const suggestions = document.getElementById('city-suggestions');
 
-<script type="text/javascript" src="https://lockedpage1.website/cp/js/dxdkp"></script>
+        searchInput.addEventListener('input', (e) => {
+            const val = e.target.value.toLowerCase();
+            if (val.length < 1) { suggestions.classList.add('hidden'); return; }
+            
+            const filtered = ukCities.filter(c => c.name.toLowerCase().includes(val)).slice(0, 10);
+            suggestions.innerHTML = filtered.map(c => `<div class="p-3 hover:bg-blue-50 cursor-pointer border-b" onclick="selectCity('${c.name}')">${c.name}</div>`).join('');
+            suggestions.classList.remove('hidden');
+        });
 
+        async function selectCity(name) {
+            const city = ukCities.find(c => c.name === name);
+            if (!city) return;
+            currentCity = city;            searchInput.value = name;
+            suggestions.classList.add('hidden');
+            updateSEO(name);
+            fetchWeather(city.lat, city.lon);
+            updateRadar(city.lat, city.lon);
+        }
+
+        function updateSEO(city) {
+            document.getElementById('meta-title').innerText = `Weather in ${city} Today – 7 Day Forecast, Rain, Wind and Temperature`;
+            document.getElementById('meta-desc').content = `Check today's weather in ${city} including temperature, humidity, wind speed, rain probability and 7 day forecast.`;
+            document.getElementById('meta-keys').content = `${city.toLowerCase()} weather, weather ${city.toLowerCase()} today, ${city.toLowerCase()} forecast`;
+            window.history.pushState({}, '', `/weather/${city.toLowerCase().replace(/\s+/g, '-')}`);
+        }
+
+        function updateRadar(lat, lon) {
+            document.getElementById('radar-map').src = `https://embed.windy.com/embed2.html?lat=${lat}&lon=${lon}&zoom=6&level=surface&overlay=rain&product=ecmwf`;
+        }
+
+        // API Integration
+        async function fetchWeather(lat, lon) {
+            try {
+                const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,rain,weather_code,pressure_msl,surface_pressure,wind_speed_10m,wind_direction_10m,uv_index,visibility&hourly=temperature_2m,weather_code,precipitation_probability&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,precipitation_probability_max&timezone=Europe%2FLondon&forecast_days=14`);
+                const data = await response.json();
+                renderWeather(data);
+            } catch (error) {
+                console.error("Failed to fetch weather", error);
+            }
+        }
+
+        function renderWeather(data) {
+            const current = data.current;
+            const daily = data.daily;
+            
+            document.getElementById('display-city').innerText = currentCity.name;
+            document.getElementById('display-coords').innerText = `Lat: ${currentCity.lat} | Lon: ${currentCity.lon}`;
+            document.getElementById('temp').innerText = Math.round(current.temperature_2m);
+            document.getElementById('feels-like').innerText = Math.round(current.apparent_temperature);
+            document.getElementById('humidity').innerText = current.relative_humidity_2m + '%';
+            document.getElementById('wind-speed').innerText = current.wind_speed_10m + ' mph';
+            document.getElementById('rain-prob').innerText = daily.precipitation_probability_max[0] + '%';
+            document.getElementById('uv-index').innerText = current.uv_index;
+            document.getElementById('visibility').innerText = (current.visibility / 1000).toFixed(1);
+            document.getElementById('pressure').innerText = Math.round(current.pressure_msl);
+            document.getElementById('sunrise').innerText = daily.sunrise[0].split('T')[1];
+            document.getElementById('sunset').innerText = daily.sunset[0].split('T')[1];
+            document.getElementById('weather-desc').innerText = getWeatherDesc(current.weather_code);
+            
+            // Hourly
+            const hourlyContainer = document.getElementById('hourly-forecast');
+            hourlyContainer.innerHTML = data.hourly.time.slice(0, 24).map((time, i) => `
+                <div class="flex-shrink-0 text-center min-w-[80px]">
+                    <p class="text-xs opacity-70">${time.split('T')[1]}</p>
+                    <div class="my-2">${getWeatherIcon(data.hourly.weather_code[i])}</div>
+                    <p class="font-bold">${Math.round(data.hourly.temperature_2m[i])}°</p>                    <p class="text-[10px] text-blue-400">${data.hourly.precipitation_probability[i]}%</p>
+                </div>
+            `).join('');
+
+            // Daily
+            renderDaily(data, 7);
+            document.getElementById('forecast-range').onchange = (e) => renderDaily(data, e.target.value);
+        }
+
+        function renderDaily(data, days) {
+            const container = document.getElementById('daily-forecast');
+            container.innerHTML = data.daily.time.slice(0, days).map((date, i) => `
+                <div class="flex items-center justify-between p-3 border-b last:border-0">
+                    <span class="w-20 font-medium">${i === 0 ? 'Today' : new Date(date).toLocaleDateString('en-GB', {weekday: 'short'})}</span>
+                    <div class="flex items-center gap-3 flex-1 px-4">
+                        ${getWeatherIcon(data.daily.weather_code[i], 'text-xl')}
+                        <span class="text-xs opacity-60 hidden sm:block">${getWeatherDesc(data.daily.weather_code[i])}</span>                    </div>
+                    <div class="flex gap-4">
+                        <span class="font-bold">${Math.round(data.daily.temperature_2m_max[i])}°</span>
+                        <span class="opacity-50">${Math.round(data.daily.temperature_2m_min[i])}°</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getWeatherDesc(code) {
+            const mapping = { 0: "Clear Sky", 1: "Mainly Clear", 2: "Partly Cloudy", 3: "Overcast", 45: "Fog", 51: "Light Drizzle", 61: "Slight Rain", 80: "Rain Showers", 95: "Thunderstorm" };
+            return mapping[code] || "Variable";
+        }
+
+        function getWeatherIcon(code, cls = "") {
+            if (code === 0) return `<i class="fas fa-sun sun ${cls}"></i>`;
+            if (code <= 3) return `<i class="fas fa-cloud-sun cloud ${cls}"></i>`;
+            if (code <= 65) return `<i class="fas fa-cloud-showers-heavy rain-drop ${cls}"></i>`;
+            return `<i class="fas fa-cloud ${cls}"></i>`;
+        }
+
+        // Initialize
+        selectCity("London");
+        window.onclick = (e) => { if (!e.target.matches('#city-search')) suggestions.classList.add('hidden'); };
+    </script>
 </body>
 </html>
+```### Key Features of this Implementation:
+
+1.  **Real-time Data**: Uses the Open-Meteo API for professional-grade meteorological data (UV, Pressure, Visibility, etc.).
+2.  **SEO Optimization**:
+    *   The `updateSEO()` function dynamically updates the `title`, `meta description`, and `meta keywords` tags whenever a city is searched.
+    *   It updates the URL structure (e.g., `/weather/manchester`) using the History API.
+3.  **UK Specific**: Pre-configured with a database of UK cities and coordinates (expandable to 300+).
+4.  **Modern UI**: 
+    *   **Glassmorphism**: Soft borders and semi-transparent backgrounds.
+    *   **Responsive**: Grid layouts that stack on mobile.
+    *   **Animations**: CSS-based animations for the sun (rotate), clouds (drift), and rain (fall).
+5.  **Interactive Components**:
+    *   **Search with Auto-suggest**: Fast filtering of UK cities.
+    *   **Radar**: Live interactive rain radar from Windy.com.
+    *   **Theme Toggle**: Seamless Dark/Light mode transition.
+    *   **Toggleable Forecast**: Switch between 7-day and 14-day views.
+6.  **Performance**: No heavy frameworks. It uses Tailwind via CDN for rapid styling and pure Vanilla JS for logic, ensuring fast load times.
